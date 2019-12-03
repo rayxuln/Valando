@@ -19,7 +19,7 @@ int main()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);//glfw大版本
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);//glfw小版本
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);//opengl库
-#ifdef APPLE
+#ifdef __APPLE__
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);//在mac平台下需要这样设置
 #endif
 
