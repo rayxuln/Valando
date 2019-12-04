@@ -13,6 +13,8 @@
 #include <string>
 #include <streambuf>
 
+#include "wrap_shaders.h"
+
 std::string GetStringFromFile(std::string path)
 {
     using namespace std;
@@ -150,7 +152,7 @@ int main()
     //加载着色器
     using std::string;
     //读取顶点着色器源代码
-    string verString = GetStringFromFile("shader/tex.vsh");
+    string verString = wrap_shaders::tex_vsh;
 
     unsigned int ver = glCreateShader(GL_VERTEX_SHADER);//创建顶点着色器
     auto verCString = verString.c_str();
@@ -168,7 +170,7 @@ int main()
 
     //fragment shader
     //获取片元着色器源代码
-    string fragString = GetStringFromFile("shader/tex.fsh");
+    string fragString = wrap_shaders::tex_fsh;
 
     unsigned frag = glCreateShader(GL_FRAGMENT_SHADER);//创建片元着色器
     auto fragCString = fragString.c_str();
