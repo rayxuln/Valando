@@ -1,2 +1,0 @@
-# Valando
-A opengl project.
