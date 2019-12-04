@@ -2,6 +2,7 @@
 // Created by Raiix on 2019/12/3.
 //
 
+//注意头文件引用的先后顺序
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
@@ -12,7 +13,6 @@ void _WindowResizeCallBack(GLFWwindow *win, int w, int h){
 
 int main()
 {
-    //注意头文件引用的先后顺序
     glfwInit();
 
     //设置窗口标识
